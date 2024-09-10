@@ -6,4 +6,3 @@ public class DisplayText {
         System.out.println(0 + "3" + 2);
     }
 }
-
