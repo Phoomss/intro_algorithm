@@ -8,12 +8,14 @@ public class App {
         // System.out.println(scores[5]);
 
 
-        // double[] scores = {10, 20, 30, 40, 50};
+        double[] scores = {10, 20, 30, 40, 50};
 
-        // // for (int i = 0; i < scores.length; i++) {
-        // //     System.out.println(scores[i]);
-        // // }
+        // basic for loop
+        for (int i = 0; i < scores.length; i++) {
+            System.out.println(scores[i]);
+        }
 
+        // // shotgun for loop
         // for (double score : scores) {
         //     System.out.println(score);
         // }

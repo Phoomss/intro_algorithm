@@ -4,38 +4,43 @@ import java.util.Locale;
 
 public class SortArray {
     public static void main(String[] args) {
-        // int[] arry = { 51, 3, 8, 20, 14 };
-        // Arrays.sort(arry);
+        // ---------- จัดเรียงอาร์เรย์ตัวเลข ----------
+        int[] numArray = { 51, 3, 8, 20, 14 };
+        Arrays.sort(numArray);
 
-        // int index = Arrays.binarySearch(arry, 51);
-        // for (int i = 0; i < arry.length; i++) {
-        //     System.out.println(arry[i]);
-        // }
-        
-        // System.out.println("Index of 51: " + index);
+        int numIndex = Arrays.binarySearch(numArray, 51);
+        System.out.println("Sorted Numeric Array:");
+        for (int num : numArray) {
+            System.out.println(num);
+        }
+        System.out.println("Index of 51: " + numIndex);
 
-        // String[] arry = { "Justins", "jame", "johe", "am", "albit", "cambal" };
-        // Arrays.sort(arry);
+        System.out.println("\n---------------------\n");
 
-        // int index = Arrays.binarySearch(arry, "Justins");
-        // for (int i = 0; i < arry.length; i++) {
-        //     System.out.println(arry[i]);
-        // }
-        // System.out.println("Index of Z: " + index);
-      
-        // ------------------------------------------------//
+        // ---------- จัดเรียงอาร์เรย์ข้อความ (ตัวอักษรอังกฤษ) ----------
+        String[] strArray = { "Justins", "jame", "johe", "am", "albit", "cambal" };
+        Arrays.sort(strArray, String.CASE_INSENSITIVE_ORDER); // เรียงแบบไม่แยกตัวพิมพ์เล็ก-ใหญ่
 
-        // String[] name = {"ไก่", "หมู", "วัว", "แกะ", "แมว", "หมา"};
+        int strIndex = Arrays.binarySearch(strArray, "Justins", String.CASE_INSENSITIVE_ORDER);
+        System.out.println("Sorted String Array:");
+        for (String str : strArray) {
+            System.out.println(str);
+        }
+        System.out.println("Index of 'Justins': " + strIndex);
 
-        // Collator myCollator = Collator.getInstance(new Locale("th", "TH"));
-        // Arrays.sort(name, myCollator);
+        System.out.println("\n---------------------\n");
 
-        // int index = Arrays.binarySearch(name, "แมว", myCollator);
-        // for (int i = 0; i < name.length; i++) {
-        //     System.out.println(name[i]);
-        // }
+        // ---------- จัดเรียงอาร์เรย์ข้อความภาษาไทย ----------
+        String[] thaiNames = { "ไก่", "หมู", "วัว", "แกะ", "แมว", "หมา" };
 
-        // System.out.println("Index of แมว: " + index);
+        Collator myCollator = Collator.getInstance(new Locale("th", "TH"));
+        Arrays.sort(thaiNames, myCollator);
 
+        int thaiIndex = Arrays.binarySearch(thaiNames, "แมว", myCollator);
+        System.out.println("Sorted Thai String Array:");
+        for (String name : thaiNames) {
+            System.out.println(name);
+        }
+        System.out.println("Index of 'แมว': " + thaiIndex);
     }
 }
