@@ -15,7 +15,7 @@ public class BmiCalculator {
         } else if (bmi < 29.9) {
             return "Overweight";
         } else {
-            return "Obese";
+            return "Obeses";
         }
     }
 }
